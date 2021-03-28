@@ -1,0 +1,54 @@
+html {
+    background: var(--bg);
+    color: var(--fg);
+    font-size: 16px;
+}
+
+hr {
+    height: 1px;
+    width: 100%;
+    background: var(--divider);
+    border: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 1rem 0;
+    font-weight: normal;
+}
+
+a {
+    color: var(--accent);
+}
+
+p {
+    margin: 1rem 0;
+}
+
+// テーマ機能実装するまで使うテーマ　ライト版
+._beta-theme-light {
+    --bg: #fefefe;
+    --panel: #efefef;
+    --fg: #22223c;
+    --accent: #0098ff;
+    --accentFg: white;
+    --danger: #ff003c;
+    --dangerFg: white;
+    --divider: #999;
+    --inputBorder: #999;
+}
+
+._vstack {
+    display: flex;
+    flex-direction: column;
+    > * + * {
+        margin-top: 16px;
+    }
+}
+
+._hstack {
+    display: flex;
+    flex-direction: row;
+    > * + * {
+        margin-left: 16px;
+    }
+}
