@@ -104,14 +104,6 @@ export const Jumbotron: React.VFC<{
         </Panel>
       </Left>
       <Right>
-        
-        <p>ここに何を置くかはまだ決めていない</p>
-        <p>まあタイムラインとかお知らせとかじゃない？</p>
-        <p>↑確定してから書け</p>
-        <p>↑だって空白だと寂しいんだもん</p>
-        <p>ちくわ大明神</p>
-        <p>↑↑確かに</p>
-        <p>誰だ今の</p>
       </Right>
       <Details>
         <p>Shrimoonをもっと知りたい？</p>
