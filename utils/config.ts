@@ -1,0 +1,1 @@
+export const getApiEndpoint = () => process.env.NEXT_PUBLIC_API_ENDPOINT ?? '';

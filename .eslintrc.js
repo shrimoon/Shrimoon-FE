@@ -21,10 +21,10 @@ module.exports = {
     '@typescript-eslint'
   ],
   'rules': {
-    'indent': [
-      'error',
-      2
-    ],
+    // 'indent': [
+    //   'error',
+    //   2
+    // ],
     'linebreak-style': [
       'error',
       'unix'
@@ -42,5 +42,6 @@ module.exports = {
     ],
     '@typescript-eslint/indent': ['error', 2],
     '@typescript-eslint/explicit-module-boundary-types': 'off',
+    '@typescript-eslint/no-explicit-any': 'off',
   }
 };

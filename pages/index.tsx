@@ -1,8 +1,10 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { NextPage } from 'next';
 import { Jumbotron, LoginMode } from '@/components/index/Jumbotron';
 import styled from '@emotion/styled';
 import { Button } from '@/components/common/ui/Button';
+import { MOBILE_BREAKPOINT } from '@/constants';
+import { useSelectorEx } from '@/hooks/useSelectorEx';
 
 const $ = styled.div`
   > section + section {
@@ -12,17 +14,28 @@ const $ = styled.div`
 
 const Description = styled.section`
   padding: 4rem 8rem;
+
+  @media screen and (max-width: ${MOBILE_BREAKPOINT}) {
+    padding: 2rem;
+  }
 `;
 
 const GettingStarted = styled.footer`
   border-top: var(--divider);
   background: var(--panel);
-  padding: 4rem 8rem;
   text-align: center;
+
+  padding: 4rem 8rem;
+
+  @media screen and (max-width: ${MOBILE_BREAKPOINT}) {
+    padding: 2rem;
+  }
 `;
 
 const IndexPage: NextPage = () => {
   const [loginMode, setLoginMode] = useState<LoginMode>('login');
+
+  const length = useSelectorEx(state => state.api.meta?.maxStatusLength ?? '???');
 
   const onCreateAccountButtonClicked = useCallback(() => {
     setLoginMode('signup');
@@ -34,7 +47,7 @@ const IndexPage: NextPage = () => {
       <Description>
         <h1>使い慣れた操作性、新しい体験。</h1>
         <p>Shrimoonは一般的なミニブログサービスの操作性を受け継いだ癖の少ないインターフェイスで、あなたの「つぶやき」を邪魔しません。</p>
-        <p>{'{'}length{'}'}文字であなたの「今」を伝えよう。</p>
+        <p>{length}文字であなたの「今」を伝えよう。</p>
       </Description>
       <Description>
         <h1>仲間と繋がろう、星を見上げよう。</h1>

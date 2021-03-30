@@ -2,6 +2,9 @@ html {
     background: var(--bg);
     color: var(--fg);
     font-size: 16px;
+    @media screen and (max-width: 400px) {
+        font-size: 14px;
+    }
 }
 
 hr {
@@ -32,6 +35,23 @@ p {
     --accent: #0098ff;
     --accentFg: white;
     --danger: #ff003c;
+    --warning: #f0b665;
+    --success: #4cb04a;
+    --dangerFg: white;
+    --divider: #999;
+    --inputBorder: #999;
+}
+
+// テーマ機能実装するまで使うテーマ　ダーク版
+._beta-theme-dark {
+    --bg: #222222;
+    --panel: #333333;
+    --fg: #fefefe;
+    --accent: #20a6ff;
+    --accentFg: white;
+    --danger: #ff003c;
+    --warning: #f0b665;
+    --success: #4cb04a;
     --dangerFg: white;
     --divider: #999;
     --inputBorder: #999;

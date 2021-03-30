@@ -26,6 +26,7 @@ const wrapperStyle = css`
     height: 2rem;
     overflow: hidden;
     outline: 0;
+    color: var(--fg);
 
     + div {
       position: absolute;
