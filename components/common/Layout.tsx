@@ -31,7 +31,6 @@ export const Layout: React.VFC<LayoutProp> = ({ Component, pageProps }) => {
 
   const get = useGetApi();
 
-
   useEffect(() => {
     get('meta').then(res => {
       if (res.ok) dispatch(setMeta(res.response));

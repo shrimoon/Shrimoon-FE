@@ -1,13 +1,13 @@
-import { User } from '@/interfaces';
+import { IUser } from '@/models/user';
 import { createSlice } from '@reduxjs/toolkit';
 
 export type AuthState = {
-  token: string | null,
-  myselfCache: User | null,
+  token: string | null | undefined,
+  myselfCache: IUser | null,
 };
 
 const initialState: AuthState = {
-  token: null,
+  token: undefined,
   myselfCache: null,
 };
 

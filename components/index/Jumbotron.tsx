@@ -1,17 +1,16 @@
-import React, { useCallback, useEffect, useMemo, useState } from 'react';
+import React, { useCallback, useMemo, useState } from 'react';
 import styled from '@emotion/styled';
+import { css } from '@emotion/react';
 import { useDispatch } from 'react-redux';
 
 import { MOBILE_BREAKPOINT } from '@/constants';
-import { useGetApi, usePostApi } from '@/hooks/useApi';
+import { usePostApi } from '@/hooks/useApi';
 import { ApiResponse } from '@/models/api-response';
 import { setMyselfCache, setToken } from '@/store/authSlice';
 import { checkPasswordStrength } from '@/utils/check-password-strength';
-import { Panel, Section } from '../common/Panel';
-import { Button } from '../common/ui/Button';
-import { Input } from '../common/ui/Input';
-import { css } from '@emotion/react';
-import { useSelectorEx } from '@/hooks/useSelectorEx';
+import { Panel, Section } from '@/components/common/Panel';
+import { Button } from '@/components/common/ui/Button';
+import { Input } from '@/components/common/ui/Input';
 
 const $ = styled.div`
   width: 100vw;
